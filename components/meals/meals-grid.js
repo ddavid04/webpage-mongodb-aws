@@ -23,7 +23,7 @@ export default function MealsGrid({loadingClass}) {
             <span className={loadingClasses.loader}></span>
             <p className={loadingClass}>Fetching meals...</p>
         </div>}
-
+        {(meals.length === 0) & !loading && <h1 className={'error'} style={{color: "tan", fontSize: "5rem"}}>No meals in database</h1>}
         {meals.message && <h1 className={'error'} style={{color: "tan", fontSize: "5rem"}}>{meals.message}. Please refresh the page.</h1>}
         {!meals.message && <ul className={classes.meals}>
             {meals.map(meal => (
