@@ -1,3 +1,5 @@
+'use server';
+
 import clientPromise from '../../../lib/mongo';
 
 export async function GET(request) {

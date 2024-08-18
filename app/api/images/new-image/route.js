@@ -1,3 +1,4 @@
+'use server';
 import {NextResponse} from "next/server";
 import {S3Client} from "@aws-sdk/client-s3";
 import {Buffer} from "buffer";
