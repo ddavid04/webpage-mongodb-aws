@@ -26,9 +26,7 @@ async function uploadFileToS3(file, fileName, key){
     })
     try {
         await upload.done();
-        console.log('File uploaded successfully:', fileName);
     } catch (uploadError) {
-        console.error('Error during upload:', uploadError);
         throw uploadError;
     }
 

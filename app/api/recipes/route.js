@@ -12,8 +12,7 @@ export async function GET(request) {
         return new Response(JSON.stringify(data), {
             headers: { 'Content-Type': 'application/json' },
         });
-    } catch (e) {
-        console.error(e);
+    } catch (error) {
         return new Response(JSON.stringify({ message: 'Error fetching data' }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' },

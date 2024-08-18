@@ -10,7 +10,6 @@ export async function POST(req) {
         const recipes = db.collection('recipes');
 
         const body = await req.json();
-        console.log(body);
         const {
             slug,
             title,
@@ -39,7 +38,6 @@ export async function POST(req) {
 
         return NextResponse.json({ success: true, recipe: result.insertedId }, { status: 201 });
     } catch (error) {
-        console.error('Error saving recipe:', error);
         return NextResponse.json({ success: false, error: error.message }, { status: 500 });
     }
 }
